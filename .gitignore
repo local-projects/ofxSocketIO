@@ -83,3 +83,12 @@ Desktop.ini
 # Node.js
 example/script/node_modules/**
 example/script/npm-debug.log
+example/.vs/
+example/bin/example.exe
+example/bin/example.exp
+example/bin/example.lib
+example/bin/example_debug.exp
+example/bin/example_debug.lib
+example/bin/fmodex.dll
+example/bin/fmodexL.dll
+example/bin/FreeImage.dll

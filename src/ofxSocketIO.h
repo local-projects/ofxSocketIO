@@ -10,6 +10,7 @@
 #include "ofEvents.h"
 #if defined(_MSC_VER) || defined(_WIN32) || defined(WIN32) || defined(__MINGW32__)
   // Windows stuff
+#include <sio_client.h>
 #else
   // Linux and OSX here
   #include <sio_client.h>

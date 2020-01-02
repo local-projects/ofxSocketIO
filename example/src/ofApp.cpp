@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
   isConnected = false;
-  address = "http://127.0.0.1:8888";
+  address = "http://127.0.0.1:8000";
   status = "not connected";
 
   socketIO.setup(address);
