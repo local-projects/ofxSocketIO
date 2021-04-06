@@ -1,1 +1,1 @@
-ofxSocketIO
+../../../ExternalAddons/ofxSocketIO

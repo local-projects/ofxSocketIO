@@ -92,3 +92,5 @@ example/bin/example_debug.lib
 example/bin/fmodex.dll
 example/bin/fmodexL.dll
 example/bin/FreeImage.dll
+
+package-lock.json
