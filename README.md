@@ -4,7 +4,7 @@
 
 `ofxSocketIO` is an ofxaddon that wraps [`socket.io-client-cpp`](https://github.com/socketio/socket.io-client-cpp). **It is still under ~~active~~ development.**
 
-*NOTE: On Windows, this addon only supports 32-bit Release builds. The Visual Studio 2019 example provided is for this use.*  
+*NOTE: On Windows, this addon only supports 32-bit Release builds. The Visual Studio 2019 example provided is for this use. It is believed that this lib is socketio version `2.3.0`*  
 
 ### Installation
 
