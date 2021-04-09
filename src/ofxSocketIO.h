@@ -21,6 +21,7 @@ class ofxSocketIO : protected ofThread {
 private :
   sio::client client;
   std::string currentStatus = "closed";
+  volatile bool _isConnected = false;
 
   void onConnect();
   void onClose(sio::client::close_reason const& reason);
@@ -29,6 +30,7 @@ private :
 
 public :
   string getStatus();
+  bool isConnected() { return _isConnected; }
 
   void setup(std::string& address);
   void setup(std::string& address, std::map<std::string,std::string>& query);
@@ -36,6 +38,7 @@ public :
   void bindEvent(ofEvent<ofxSocketIOData&>& event, std::string eventName, std::string nsp="");
 
   ofEvent<void> connectionEvent;
+  ofEvent<void> disconnectionEvent;
   ofEvent<std::string> notifyEvent;
 
   void emit(std::string& eventName);

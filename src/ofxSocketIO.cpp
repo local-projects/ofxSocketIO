@@ -24,13 +24,16 @@ void ofxSocketIO::setup (std::string &address, std::map<std::string,std::string>
 
 void ofxSocketIO::onConnect () {
   currentStatus = "connected";
+  _isConnected = true;
   ofNotifyEvent(notifyEvent, currentStatus);
   ofNotifyEvent(connectionEvent);
 }
 
 void ofxSocketIO::onClose (sio::client::close_reason const& reason) {
   currentStatus = "closed";
+  _isConnected = false;
   ofNotifyEvent(notifyEvent, currentStatus);
+  ofNotifyEvent(disconnectionEvent);
 }
 
 void ofxSocketIO::onFail () {
@@ -40,7 +43,9 @@ void ofxSocketIO::onFail () {
 
 void ofxSocketIO::onTryReconnect () {
   currentStatus = "reconnecting";
+  _isConnected = false;
   ofNotifyEvent(notifyEvent, currentStatus);
+  ofNotifyEvent(disconnectionEvent);
 }
 
 string ofxSocketIO::getStatus() {
